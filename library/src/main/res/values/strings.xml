@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">library</string>
+
+    <!-- rate related -->
+    <string name="nc_utils_rate_dialog_title">Rate Us</string>
+    <string name="nc_utils_rate_dialog_message">Enjoying this app?</string>
+    <string name="nc_utils_rate_dialog_message_2">If you enjoy using this app, would you mind taking a moment to rate it? It won\'t take more than a minute. Thank you for your support!</string>
+    <string name="nc_utils_rate_dialog_message_3">Thank you for your rating. Your feedback can help us improve.</string>
+    <string name="nc_utils_rate_dialog_ok">Rate now</string>
+    <string name="nc_utils_rate_dialog_cancel">Later</string>
+    <string name="nc_utils_rate_dialog_no">No, thanks</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">No rating was selected.</string>
+
+    <!-- feedback -->
+    <string name="nc_utils_feedback">Feedback</string>
+    <string name="nc_utils_feedback_anonymously">Feedback Anonymously</string>
+    <string name="nc_utils_feedback_by_email">Feedback by Email</string>
+    <string name="nc_utils_feedback_confirm">Confirm</string>
+    <string name="nc_utils_feedback_cancel">Cancel</string>
+    <string name="nc_utils_feedback_ok">OK</string>
+    <string name="nc_utils_feedback_send">Send</string>
+    <string name="nc_utils_feedback_confirm_send">Confirm send?</string>
+    <string name="nc_utils_feedback_loading">Loading</string>
+    <string name="nc_utils_feedback_please_wait">Please wait...</string>
+
+    <!-- feedback anonymously-->
+    <string name="nc_utils_feedback_message">Please give us your honest feedback.</string>
+    <string name="nc_utils_insert_feedback">Type in your feedback</string>
+    <string name="nc_utils_feedback_send_success">Thank you for your feedback.</string>
+    <string name="nc_utils_feedback_invalid_feedback">Invalid feedback :(</string>
+    <string name="nc_utils_feedback_input_email_address_title">Your email (Optional)</string>
+    <string name="nc_utils_feedback_input_email_address_message">Let us reach out to you by filling up your email address below:</string>
+    <string name="nc_utils_feedback_hint_email_address">Your email address</string>
+
+    <!-- feedback email -->
+    <string name="nc_utils_feedback_email_subject">App - Feedback</string>
+    <string name="nc_utils_feedback_email_message">Hello,\n\n</string>
+</resources>
