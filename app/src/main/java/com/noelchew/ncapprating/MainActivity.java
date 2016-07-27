@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.noelchew.ncappfeedback.library.NcAppFeedback;
 import com.noelchew.ncappfeedback.library.NcAppFeedbackListener;
 import com.noelchew.ncapprating.library.NcAppRating;
+import com.noelchew.ncapprating.library.NcAppRatingConfig;
+import com.noelchew.ncapprating.library.NcAppRatingListener;
 import com.noelchew.ncapprating.library.PlayStoreUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setTitle(R.string.nc_utils_feedback_loading);
         progressDialog.setMessage(getString(R.string.nc_utils_feedback_please_wait));
 
-        NcAppRating.Config config = new NcAppRating.Config(0, 0, false, 4, ncAppRatingUtilCallback);
-        ncAppRating = new NcAppRating(context, config, ncAppRatingUtilCallback);
+        NcAppRatingConfig config = new NcAppRatingConfig(0, 0, false, 4, ncAppRatingListener);
+        ncAppRating = new NcAppRating(context, config);
         ncAppRating.showRateDialogIfNeeded();
 
         btnRateUs.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected NcAppRating.Callback ncAppRatingUtilCallback = new NcAppRating.Callback() {
+    protected NcAppRatingListener ncAppRatingListener = new NcAppRatingListener() {
         @Override
         public void onOpenMarket(int rating) {
             Log.d(TAG, "NcAppRating - onOpenMarket() rating: " + String.valueOf(rating));

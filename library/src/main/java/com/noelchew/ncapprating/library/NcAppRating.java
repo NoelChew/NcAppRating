@@ -1,14 +1,16 @@
 package com.noelchew.ncapprating.library;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.StringRes;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,9 +34,6 @@ public class NcAppRating {
     private static final String KEY_OPT_OUT = "nc_opt_out";
     private static final String KEY_ASK_LATER_DATE = "nc_ask_later_date";
 
-    /**
-     * If true, print LogCat
-     */
     public static final boolean DEBUG = false;
 
     private Context context;
@@ -44,7 +43,7 @@ public class NcAppRating {
     private boolean mOptOut = false;
     private Date mAskLaterDate = new Date();
 
-    private Config sConfig = new Config();
+    private NcAppRatingConfig sConfig = new NcAppRatingConfig();
 
     // Weak ref to avoid leaking the context
     private WeakReference<AlertDialog> sDialogRef = null;
@@ -57,22 +56,15 @@ public class NcAppRating {
         onStart();
     }
 
-    public NcAppRating(Context context, Config config) {
+    public NcAppRating(Context context, NcAppRatingConfig config) {
         this.context = context;
         this.sConfig = config;
         onStart();
     }
 
-    public NcAppRating(Context context, Callback callback) {
+    public NcAppRating(Context context, NcAppRatingListener callback) {
         this.context = context;
         this.sConfig.setCallback(callback);
-        onStart();
-    }
-
-    public NcAppRating(Context context, Config config, Callback callback) {
-        this.context = context;
-        config.setCallback(callback);
-        this.sConfig = config;
         onStart();
     }
 
@@ -142,10 +134,10 @@ public class NcAppRating {
         if (mOptOut) {
             return false;
         } else {
-            if (mLaunchTimes >= sConfig.mCriteriaLaunchTimes) {
+            if (mLaunchTimes >= sConfig.getCriteriaLaunchTimes()) {
                 return true;
             }
-            long threshold = sConfig.mCriteriaInstallDays * 24 * 60 * 60 * 1000L;	// msec
+            long threshold = sConfig.getCriteriaInstallDays() * 24 * 60 * 60 * 1000L;	// msec
             if (new Date().getTime() - mInstallDate.getTime() >= threshold &&
                     new Date().getTime() - mAskLaterDate.getTime() >= threshold) {
                 return true;
@@ -187,11 +179,11 @@ public class NcAppRating {
             return;
         }
 
-        int titleId = sConfig.mTitleId != 0 ? sConfig.mTitleId : R.string.nc_utils_rate_dialog_title;
-        int messageId = sConfig.mMessageId != 0 ? sConfig.mMessageId : R.string.nc_utils_rate_dialog_message;
-        int cancelButtonID = sConfig.mCancelButton != 0 ? sConfig.mCancelButton : R.string.nc_utils_rate_dialog_cancel;
-        int thanksButtonID = sConfig.mNoButtonId != 0 ? sConfig.mNoButtonId : R.string.nc_utils_rate_dialog_no;
-        int rateButtonID = sConfig.mYesButtonId != 0 ? sConfig.mYesButtonId : R.string.nc_utils_rate_dialog_ok;
+        int titleId = sConfig.getTitleResourceId() != 0 ? sConfig.getTitleResourceId() : R.string.nc_utils_rate_dialog_title;
+        int messageId = sConfig.getMessageResourceId() != 0 ? sConfig.getMessageResourceId() : R.string.nc_utils_rate_dialog_message;
+        int cancelButtonID = sConfig.getCancelButtonTextResourceId() != 0 ? sConfig.getCancelButtonTextResourceId() : R.string.nc_utils_rate_dialog_cancel;
+        int thanksButtonID = sConfig.getNoButtonTextResourceId() != 0 ? sConfig.getNoButtonTextResourceId() : R.string.nc_utils_rate_dialog_no;
+        int rateButtonID = sConfig.getYesButtonTextResourceId() != 0 ? sConfig.getYesButtonTextResourceId() : R.string.nc_utils_rate_dialog_ok;
         LayoutInflater inflater = LayoutInflater.from(context);
         dialogView = inflater.inflate(R.layout.stars, null);
         TextView contentTextView = (TextView)dialogView.findViewById(R.id.text_content);
@@ -201,9 +193,9 @@ public class NcAppRating {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 Log.d(TAG, "Rating changed : " + v);
-                if (sConfig.mForceMode && v >= sConfig.mUpperBound) {
-                    if (sConfig.mCallback != null) {
-                        sConfig.mCallback.onOpenMarket((int)ratingBar.getRating());
+                if (sConfig.isForceMode() && v >= sConfig.getUpperBound()) {
+                    if (sConfig.getListener() != null) {
+                        sConfig.getListener().onOpenMarket((int)ratingBar.getRating());
                     }
                 }
             }
@@ -213,11 +205,11 @@ public class NcAppRating {
         builder.setPositiveButton(rateButtonID, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (sConfig.mCallback != null) {
+                if (sConfig.getListener() != null) {
 //                    sCallback.onYesClicked();
                     final RatingBar ratingBar = (RatingBar) dialogView.findViewById(R.id.ratingBar);
-                    if (ratingBar.getRating() >= sConfig.mUpperBound) {
-                        sConfig.mCallback.onOpenMarket((int)ratingBar.getRating());
+                    if (ratingBar.getRating() >= sConfig.getUpperBound()) {
+                        sConfig.getListener().onOpenMarket((int)ratingBar.getRating());
                         setOptOut(context, true);
                     } else if (ratingBar.getRating() == 0) {
                         Toast.makeText(context, R.string.nc_utils_rate_dialog_please_select_a_rating, Toast.LENGTH_SHORT).show();
@@ -234,7 +226,7 @@ public class NcAppRating {
                                 if (progressDialog != null && progressDialog.isShowing()) {
                                     progressDialog.dismiss();
                                 }
-                                sConfig.mCallback.onShowFeedbackDialog((int)ratingBar.getRating());
+                                sConfig.getListener().onShowFeedbackDialog((int)ratingBar.getRating());
                                 setOptOut(context, true);
                             }
                         }, 1500);
@@ -247,8 +239,8 @@ public class NcAppRating {
         builder.setNeutralButton(cancelButtonID, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (sConfig.mCallback != null) {
-                    sConfig.mCallback.onCancelClicked();
+                if (sConfig.getListener() != null) {
+                    sConfig.getListener().onCancelClicked();
                 }
                 clearSharedPreferences(context);
                 storeAskLaterDate(context);
@@ -257,8 +249,8 @@ public class NcAppRating {
         builder.setNegativeButton(thanksButtonID, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (sConfig.mCallback != null) {
-                    sConfig.mCallback.onNoClicked();
+                if (sConfig.getListener() != null) {
+                    sConfig.getListener().onNoClicked();
                 }
                 setOptOut(context, true);
             }
@@ -266,8 +258,8 @@ public class NcAppRating {
         builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-                if (sConfig.mCallback != null) {
-                    sConfig.mCallback.onCancelClicked();
+                if (sConfig.getListener() != null) {
+                    sConfig.getListener().onCancelClicked();
                 }
                 clearSharedPreferences(context);
                 storeAskLaterDate(context);
@@ -358,109 +350,40 @@ public class NcAppRating {
      */
     private void log(String message) {
         if (DEBUG) {
-            Log.v(TAG, message);
+            Log.d(TAG, message);
         }
     }
 
-    /**
-     * RateThisApp configuration.
-     */
-    public static class Config {
-        private int mCriteriaInstallDays;
-        private int mCriteriaLaunchTimes;
-        private boolean mForceMode; // if true, will open market once user change rating
-        private int mUpperBound; // app will open market if user's rating is >= mUpperBound
-        private int mTitleId = 0;
-        private int mMessageId = 0;
-        private int mYesButtonId = 0;
-        private int mNoButtonId = 0;
-        private int mCancelButton = 0;
-        private Callback mCallback = null;
-
-        /**
-         * Constructor with default criteria.
-         */
-        public Config() {
-            this(5, 8, false, 4, null);
-        }
-
-        public Config(int criteriaInstallDays, int criteriaLaunchTimes, boolean forceMode, int upperBound, Callback callback) {
-            this.mCriteriaInstallDays = criteriaInstallDays;
-            this.mCriteriaLaunchTimes = criteriaLaunchTimes;
-            this.mForceMode = forceMode;
-            this.mUpperBound = upperBound;
-            this.mCallback = callback;
-        }
-
-        public void setCallback(Callback mCallback) {
-            this.mCallback = mCallback;
-        }
-
-        /**
-         * Set title string ID.
-         * @param stringId
-         */
-        public void setTitle(@StringRes int stringId) {
-            this.mTitleId = stringId;
-        }
-
-        /**
-         * Set message string ID.
-         * @param stringId
-         */
-        public void setMessage(@StringRes int stringId) {
-            this.mMessageId = stringId;
-        }
-
-        /**
-         * Set rate now string ID.
-         * @param stringId
-         */
-        public void setYesButtonText(@StringRes int stringId) {
-            this.mYesButtonId = stringId;
-        }
-
-        /**
-         * Set no thanks string ID.
-         * @param stringId
-         */
-        public void setNoButtonText(@StringRes int stringId) {
-            this.mNoButtonId = stringId;
-        }
-
-        /**
-         * Set cancel string ID.
-         * @param stringId
-         */
-        public void setCancelButtonText(@StringRes int stringId) {
-            this.mCancelButton = stringId;
+    public static void goToMarket(Context context, String webUrl, String marketUri) {
+        Uri uri = Uri.parse(marketUri);
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        // To count with Play market backstack, After pressing back button,
+        // to taken back to our application, we need to add following flags to intent.
+        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET |
+                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        try {
+            context.startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(webUrl)));
         }
     }
 
-    /**
-     * Callback of dialog click event
-     */
-    public interface Callback {
-        /**
-         * "Rate now" event
-         *
-         String appPackage = context.getPackageName();
-         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackage));
-         context.startActivity(intent);
-         */
-        void onOpenMarket(int rating);
-
-        /**
-         * "No, thanks" event
-         */
-        void onNoClicked();
-
-        /**
-         * "Later" event
-         */
-        void onCancelClicked();
-
-        // bad rating received. will prompt feedback
-        void onShowFeedbackDialog(int rating);
+    // call this method if you want users to rate your app
+    public static void rateUs(Context context) {
+        Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        // To count with Play market backstack, After pressing back button,
+        // to taken back to our application, we need to add following flags to intent.
+        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET |
+                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        try {
+            context.startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + context.getPackageName())));
+        }
     }
 }
