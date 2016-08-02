@@ -7,10 +7,9 @@ import android.support.annotation.StringRes;
  */
 public class NcAppRatingConfig {
 
-    private int criteriaInstallDays;
-    private int criteriaLaunchTimes;
-    private boolean forceMode; // if true, will open market once user change rating
-    private int upperBound; // app will open market if user's rating is >= upperBound
+    private int installedDays;
+    private int launchedTimes;
+    private int minimumTargetRating; // app will open market if user's rating is >= minimumTargetRating
     private int titleResourceId = 0;
     private int messageResourceId = 0;
     private int yesButtonTextResourceId = 0;
@@ -22,19 +21,25 @@ public class NcAppRatingConfig {
      * Constructor with default criteria.
      */
     public NcAppRatingConfig() {
-        this(5, 8, false, 4, null);
+        this(5, 8, 4, null);
     }
 
-    public NcAppRatingConfig(int criteriaInstallDays, int criteriaLaunchTimes, boolean forceMode, int upperBound, NcAppRatingListener listener) {
-        this.criteriaInstallDays = criteriaInstallDays;
-        this.criteriaLaunchTimes = criteriaLaunchTimes;
-        this.forceMode = forceMode;
-        this.upperBound = upperBound;
+    /***
+     * Configuration for NcAppRating
+     * @param installedDays Days installed before prompting user to rate
+     * @param launchedTimes Number of times launched before prompting user to rate
+     * @param minimumTargetRating Minimum rating to call NcAppRatingListener.onOpenMarket
+     * @param listener NcAppRatingListener
+     */
+    public NcAppRatingConfig(int installedDays, int launchedTimes, int minimumTargetRating, NcAppRatingListener listener) {
+        this.installedDays = installedDays;
+        this.launchedTimes = launchedTimes;
+        this.minimumTargetRating = minimumTargetRating;
         this.listener = listener;
     }
 
-    public void setCallback(NcAppRatingListener mCallback) {
-        this.listener = mCallback;
+    public void setListener(NcAppRatingListener listener) {
+        this.listener = listener;
     }
 
     /**
@@ -77,20 +82,16 @@ public class NcAppRatingConfig {
         this.cancelButtonTextResourceId = stringId;
     }
 
-    public int getCriteriaInstallDays() {
-        return criteriaInstallDays;
+    public int getInstalledDays() {
+        return installedDays;
     }
 
-    public int getCriteriaLaunchTimes() {
-        return criteriaLaunchTimes;
+    public int getLaunchedTimes() {
+        return launchedTimes;
     }
 
-    public boolean isForceMode() {
-        return forceMode;
-    }
-
-    public int getUpperBound() {
-        return upperBound;
+    public int getMinimumTargetRating() {
+        return minimumTargetRating;
     }
 
     public int getTitleResourceId() {

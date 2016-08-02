@@ -19,6 +19,10 @@ import com.noelchew.ncapprating.library.PlayStoreUtil;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
+    private static final int INSTALLED_DAYS = 0;
+    private static final int LAUNCHED_TIMES = 0;
+    private static final int MINIMUM_TARGET_RATING = 4;
+
     private static final String SPARKPOST_API_KEY = "insert_your_sparkpost_api_key_here";
     private static final String SENDER_EMAIL = "sender@sparkpost.com";
     private static final String SENDER_NAME = "NcAppFeedback Demo User";
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setTitle(R.string.nc_utils_feedback_loading);
         progressDialog.setMessage(getString(R.string.nc_utils_feedback_please_wait));
 
-        NcAppRatingConfig config = new NcAppRatingConfig(0, 0, false, 4, ncAppRatingListener);
+        NcAppRatingConfig config = new NcAppRatingConfig(INSTALLED_DAYS, LAUNCHED_TIMES, MINIMUM_TARGET_RATING, ncAppRatingListener);
         ncAppRating = new NcAppRating(context, config);
         ncAppRating.showRateDialogIfNeeded();
 
