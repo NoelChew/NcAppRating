@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">library</string>
-
     <!-- rate related -->
     <string name="nc_utils_rate_dialog_title">Rate Us</string>
     <string name="nc_utils_rate_dialog_message">Enjoying this app?</string>
