@@ -1,8 +1,18 @@
 # NcAppRating
 Android App Rating Library
 
+####Prompts rating dialog when prompting criteria are met.
+
 ![screenshot1](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_1.png)
 ![screenshot2](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_2.png)
+
+
+####User can set preferred rating.
+
+For example:
+
+4 Star is set as the target rating. If user selects 3 Star or below will trigger a "feedback" callback.
+
 ![screenshot3](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_3.png)
 ![screenshot4](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_4.png)
 
