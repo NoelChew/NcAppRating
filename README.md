@@ -7,11 +7,11 @@ Android App Rating Library
 ![screenshot2](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_2.png)
 
 
-####User can set preferred rating.
+####Preferred rating to redirect to Google Play can be set.
 
 For example:
 
-4 Star is set as the target rating. If user selects 3 Star or below will trigger a "feedback" callback.
+4 Star is set as the target rating. If user selects 3 Star or below,  a "feedback" callback will be triggered.
 
 ![screenshot3](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_3.png)
 ![screenshot4](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_4.png)
