@@ -31,7 +31,7 @@ public class NcAppRating {
     private static final String PREF_NAME = "NcAppRating";
     private static final String KEY_INSTALL_DATE = "nc_install_date";
     private static final String KEY_LAUNCH_TIMES = "nc_launch_times";
-    private static final String KEY_OPT_OUT = "nc_opt_out";
+    private static final String NEVER_SHOW_AGAIN = "nc_opt_out";
     private static final String KEY_ASK_LATER_DATE = "nc_ask_later_date";
 
     public static final boolean DEBUG = false;
@@ -40,7 +40,7 @@ public class NcAppRating {
 
     private Date mInstallDate = new Date();
     private int mLaunchTimes = 0;
-    private boolean mOptOut = false;
+    private boolean mNeverShowAgain = false;
     private Date mAskLaterDate = new Date();
 
     private NcAppRatingConfig sConfig = new NcAppRatingConfig();
@@ -64,7 +64,7 @@ public class NcAppRating {
 
     public NcAppRating(Context context, NcAppRatingListener callback) {
         this.context = context;
-        this.sConfig.setCallback(callback);
+        this.sConfig.setListener(callback);
         onStart();
     }
 
@@ -89,7 +89,7 @@ public class NcAppRating {
 
         mInstallDate = new Date(pref.getLong(KEY_INSTALL_DATE, 0));
         mLaunchTimes = pref.getInt(KEY_LAUNCH_TIMES, 0);
-        mOptOut = pref.getBoolean(KEY_OPT_OUT, false);
+        mNeverShowAgain = pref.getBoolean(NEVER_SHOW_AGAIN, false);
         mAskLaterDate = new Date(pref.getLong(KEY_ASK_LATER_DATE, 0));
 
         printStatus(context);
@@ -131,13 +131,13 @@ public class NcAppRating {
      * @return
      */
     public boolean shouldShowRateDialog() {
-        if (mOptOut) {
+        if (mNeverShowAgain) {
             return false;
         } else {
-            if (mLaunchTimes >= sConfig.getCriteriaLaunchTimes()) {
+            if (mLaunchTimes >= sConfig.getLaunchedTimes()) {
                 return true;
             }
-            long threshold = sConfig.getCriteriaInstallDays() * 24 * 60 * 60 * 1000L;	// msec
+            long threshold = sConfig.getInstalledDays() * 24 * 60 * 60 * 1000L;	// msec
             if (new Date().getTime() - mInstallDate.getTime() >= threshold &&
                     new Date().getTime() - mAskLaterDate.getTime() >= threshold) {
                 return true;
@@ -170,7 +170,7 @@ public class NcAppRating {
      * @param context
      */
     public void stopRateDialog(final Context context){
-        setOptOut(context, true);
+        setNeverShowAgain(context, true);
     }
 
     private void showRateDialog(final Context context, AlertDialog.Builder builder) {
@@ -189,17 +189,6 @@ public class NcAppRating {
         TextView contentTextView = (TextView)dialogView.findViewById(R.id.text_content);
         contentTextView.setText(messageId);
         RatingBar ratingBar = (RatingBar) dialogView.findViewById(R.id.ratingBar);
-        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                Log.d(TAG, "Rating changed : " + v);
-                if (sConfig.isForceMode() && v >= sConfig.getUpperBound()) {
-                    if (sConfig.getListener() != null) {
-                        sConfig.getListener().onOpenMarket((int)ratingBar.getRating());
-                    }
-                }
-            }
-        });
         builder.setView(dialogView);
         builder.setTitle(titleId);
         builder.setPositiveButton(rateButtonID, new DialogInterface.OnClickListener() {
@@ -208,9 +197,9 @@ public class NcAppRating {
                 if (sConfig.getListener() != null) {
 //                    sCallback.onYesClicked();
                     final RatingBar ratingBar = (RatingBar) dialogView.findViewById(R.id.ratingBar);
-                    if (ratingBar.getRating() >= sConfig.getUpperBound()) {
+                    if (ratingBar.getRating() >= sConfig.getMinimumTargetRating()) {
                         sConfig.getListener().onOpenMarket((int)ratingBar.getRating());
-                        setOptOut(context, true);
+                        setNeverShowAgain(context, true);
                     } else if (ratingBar.getRating() == 0) {
                         Toast.makeText(context, R.string.nc_utils_rate_dialog_please_select_a_rating, Toast.LENGTH_SHORT).show();
                     } else {
@@ -227,7 +216,7 @@ public class NcAppRating {
                                     progressDialog.dismiss();
                                 }
                                 sConfig.getListener().onShowFeedbackDialog((int)ratingBar.getRating());
-                                setOptOut(context, true);
+                                setNeverShowAgain(context, true);
                             }
                         }, 1500);
 
@@ -252,7 +241,7 @@ public class NcAppRating {
                 if (sConfig.getListener() != null) {
                     sConfig.getListener().onNoClicked();
                 }
-                setOptOut(context, true);
+                setNeverShowAgain(context, true);
             }
         });
         builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -290,14 +279,14 @@ public class NcAppRating {
     /**
      * Set opt out flag. If it is true, the rate dialog will never shown unless app data is cleared.
      * @param context
-     * @param optOut
+     * @param neverShowAgain
      */
-    public void setOptOut(final Context context, boolean optOut) {
+    public void setNeverShowAgain(final Context context, boolean neverShowAgain) {
         SharedPreferences pref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean(KEY_OPT_OUT, optOut);
+        editor.putBoolean(NEVER_SHOW_AGAIN, neverShowAgain);
         editor.commit();
-        mOptOut = optOut;
+        mNeverShowAgain = neverShowAgain;
     }
 
     /**
@@ -341,7 +330,7 @@ public class NcAppRating {
         log("*** NcAppRatingUtil Status ***");
         log("Install Date: " + new Date(pref.getLong(KEY_INSTALL_DATE, 0)));
         log("Launch Times: " + pref.getInt(KEY_LAUNCH_TIMES, 0));
-        log("Opt out: " + pref.getBoolean(KEY_OPT_OUT, false));
+        log("Opt out: " + pref.getBoolean(NEVER_SHOW_AGAIN, false));
     }
 
     /**
