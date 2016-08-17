@@ -1,4 +1,6 @@
 # NcAppRating
+[![Release](https://jitpack.io/v/noelchew/NcAppRating.svg)](https://jitpack.io/#noelchew/NcAppRating)
+
 Android App Rating Library
 
 ####Prompts rating dialog when prompting criteria are met.
