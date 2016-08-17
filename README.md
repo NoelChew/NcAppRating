@@ -1,8 +1,20 @@
 # NcAppRating
+[![Release](https://jitpack.io/v/noelchew/NcAppRating.svg)](https://jitpack.io/#noelchew/NcAppRating)
+
 Android App Rating Library
+
+####Prompts rating dialog when prompting criteria are met.
 
 ![screenshot1](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_1.png)
 ![screenshot2](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_2.png)
+
+
+####Preferred rating to redirect to Google Play can be set.
+
+For example:
+
+4 Star is set as the target rating. If user selects 3 Star or below,  a "feedback" callback will be triggered.
+
 ![screenshot3](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_3.png)
 ![screenshot4](https://github.com/NoelChew/NcAppRating/blob/master/screenshot_4.png)
 
@@ -61,7 +73,7 @@ allprojects {
 Application level gradle:
 ```
 dependencies {
-    compile 'com.github.noelchew:NcAppRating:0.1.3'
+    compile 'com.github.noelchew:NcAppRating:0.1.4'
 }
 ```
 Note: do not add the jitpack.io repository under buildscript
