@@ -40,3 +40,25 @@ captures/
 *.jks
 
 .idea/misc.xml
+
+.idea/libraries/android_sparkpost_0_1_0.xml
+
+.idea/libraries/NcAppFeedback_0_1_8.xml
+
+.idea/libraries/android_sparkpost_0_1_0.xml
+
+.idea/libraries/appcompat_v7_23_4_0.xml
+
+.idea/libraries/core_0_8_5_9.xml
+
+.idea/libraries/library_1_1_5.xml
+
+.idea/libraries/NcAppFeedback_0_1_6.xml
+
+.idea/libraries/recyclerview_v7_23_4_0.xml
+
+.idea/libraries/support_v4_23_4_0.xml
+
+.idea/libraries/support_vector_drawable_23_4_0.xml
+
+projectFilesBackup/.idea/workspace.xml

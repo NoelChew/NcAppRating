@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     SENDER_EMAIL,
                     SENDER_NAME,
                     RECIPIENT_EMAIL,
+                    rating,
                     new NcAppFeedbackListener() {
                         @Override
                         public void onFeedbackAnonymouslySuccess() {
