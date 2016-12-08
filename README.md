@@ -71,9 +71,12 @@ allprojects {
 ```
 
 Application level gradle:
+
+[![Release](https://jitpack.io/v/noelchew/NcAppRating.svg)](https://jitpack.io/#noelchew/NcAppRating)
+
 ```
 dependencies {
-    compile 'com.github.noelchew:NcAppRating:0.1.4'
+    compile 'com.github.noelchew:NcAppRating:x.y.z'
 }
 ```
 Note: do not add the jitpack.io repository under buildscript
