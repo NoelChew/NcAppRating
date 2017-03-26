@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">Sende</string>
+    <string name="nc_utils_feedback">Bedøm os</string>
+    <string name="nc_utils_feedback_anonymously">Nyder denne app?</string>
+    <string name="nc_utils_feedback_by_email">Hvis du nyder at bruge denne app, vil du noget imod at tage et øjeblik til at bedømme det? Den vandt \\ \'t tage mere end et minut. Tak for din støtte!</string>
+    <string name="nc_utils_feedback_cancel">Tak for din bedømmelse. Din feedback, kan hjælpe os med at forbedre.</string>
+    <string name="nc_utils_feedback_confirm">Vurder nu</string>
+    <string name="nc_utils_feedback_confirm_send">Senere</string>
+    <string name="nc_utils_feedback_email_message">Nej tak</string>
+    <string name="nc_utils_feedback_email_subject">Ingen rating blev valgt.</string>
+    <string name="nc_utils_feedback_hint_email_address">Feedback</string>
+    <string name="nc_utils_feedback_input_email_address_message">Feedback anonymt</string>
+    <string name="nc_utils_feedback_input_email_address_title">Feedback via e-mail</string>
+    <string name="nc_utils_feedback_invalid_feedback">Bekræfte</string>
+    <string name="nc_utils_feedback_loading">Afbestille</string>
+    <string name="nc_utils_feedback_message">Okay</string>
+    <string name="nc_utils_feedback_please_wait">Bekræft sende?</string>
+    <string name="nc_utils_feedback_send">Indlæser</string>
+    <string name="nc_utils_feedback_send_success">Vent venligst...</string>
+    <string name="nc_utils_insert_feedback">Giv os din ærlige feedback.</string>
+    <string name="nc_utils_rate_dialog_cancel">Indtast din tilbagemelding</string>
+    <string name="nc_utils_rate_dialog_message">Tak for din feedback.</string>
+    <string name="nc_utils_rate_dialog_message_2">Ugyldig tilbagemelding :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Din e-mail (valgfrit)</string>
+    <string name="nc_utils_rate_dialog_no">Lad os nå ud til dig ved at udfylde din e-mail-adresse nedenfor:</string>
+    <string name="nc_utils_rate_dialog_ok">Din email adresse</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Feedback</string>
+    <string name="nc_utils_rate_dialog_title">Hej,</string>
+</resources>

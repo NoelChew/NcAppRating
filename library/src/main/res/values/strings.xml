@@ -6,7 +6,7 @@
     <string name="nc_utils_rate_dialog_message_3">Thank you for your rating. Your feedback can help us improve.</string>
     <string name="nc_utils_rate_dialog_ok">Rate now</string>
     <string name="nc_utils_rate_dialog_cancel">Later</string>
-    <string name="nc_utils_rate_dialog_no">No, thanks</string>
+    <string name="nc_utils_rate_dialog_no">No\u002C thanks</string>
     <string name="nc_utils_rate_dialog_please_select_a_rating">No rating was selected.</string>
 
     <!-- feedback -->
@@ -32,5 +32,5 @@
 
     <!-- feedback email -->
     <string name="nc_utils_feedback_email_subject">App - Feedback</string>
-    <string name="nc_utils_feedback_email_message">Hello,\n\n</string>
+    <string name="nc_utils_feedback_email_message">Hello\u002C</string>
 </resources>

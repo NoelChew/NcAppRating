@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">Senden</string>
+    <string name="nc_utils_feedback">Bewerten Sie uns</string>
+    <string name="nc_utils_feedback_anonymously">Genießen Sie diese App?</string>
+    <string name="nc_utils_feedback_by_email">Wenn Sie diese App genießen verwenden, würden Sie einen Moment Zeit nehmen dagegen, es zu bewerten? Es gewann \\ \'t mehr als eine Minute. Danke für Ihre Unterstützung!</string>
+    <string name="nc_utils_feedback_cancel">Vielen Dank für Ihre Bewertung. Ihr Feedback kann helfen, uns zu verbessern.</string>
+    <string name="nc_utils_feedback_confirm">Jetzt bewerten</string>
+    <string name="nc_utils_feedback_confirm_send">Später</string>
+    <string name="nc_utils_feedback_email_subject">Es wurde keine Bewertung ausgewählt.</string>
+    <string name="nc_utils_feedback_hint_email_address">Feedback</string>
+    <string name="nc_utils_feedback_input_email_address_message">Feedback Anonymously</string>
+    <string name="nc_utils_feedback_input_email_address_title">Feedback per E-Mail</string>
+    <string name="nc_utils_feedback_invalid_feedback">Bestätigen</string>
+    <string name="nc_utils_feedback_loading">Stornieren</string>
+    <string name="nc_utils_feedback_message">OK</string>
+    <string name="nc_utils_feedback_please_wait">Bestätigen Sie schicken?</string>
+    <string name="nc_utils_feedback_send">Laden</string>
+    <string name="nc_utils_feedback_send_success">Warten Sie mal...</string>
+    <string name="nc_utils_insert_feedback">Bitte geben Sie uns Ihr ehrliches Feedback.</string>
+    <string name="nc_utils_rate_dialog_cancel">Geben Sie Ihr Feedback</string>
+    <string name="nc_utils_rate_dialog_message">Danke für Ihre Rückmeldung.</string>
+    <string name="nc_utils_rate_dialog_message_2">Ungültige Feedback :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Deine E-Mail (optional)</string>
+    <string name="nc_utils_rate_dialog_no">Lassen Sie uns unten durch Füllen Sie Ihre E-Mail-Adresse, die Sie erreichen:</string>
+    <string name="nc_utils_rate_dialog_ok">deine Emailadresse</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Bewertung</string>
+    <string name="nc_utils_rate_dialog_title">Hallo,</string>
+    <string name="nc_utils_feedback_email_message">Nein Danke</string>
+</resources>
