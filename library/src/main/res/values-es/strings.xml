@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">Enviar</string>
+    <string name="nc_utils_feedback">nosotros tasa</string>
+    <string name="nc_utils_feedback_anonymously">Disfrutando de esta aplicación?</string>
+    <string name="nc_utils_feedback_by_email">Si te gusta usar esta aplicación, ¿le importaría tomar un momento para evaluar ella? Se ganó \\ \'t toma más de un minuto. ¡Gracias por tu apoyo!</string>
+    <string name="nc_utils_feedback_cancel">Gracias por tu valoración. Su regeneración puede ayudar a mejorar la calidad.</string>
+    <string name="nc_utils_feedback_confirm">Califica ahora</string>
+    <string name="nc_utils_feedback_confirm_send">Luego</string>
+    <string name="nc_utils_feedback_email_message">No, gracias</string>
+    <string name="nc_utils_feedback_email_subject">Se seleccionó ninguna clasificación.</string>
+    <string name="nc_utils_feedback_hint_email_address">Realimentación</string>
+    <string name="nc_utils_feedback_input_email_address_message">Comentarios anónimamente</string>
+    <string name="nc_utils_feedback_input_email_address_title">Comentarios por correo electrónico</string>
+    <string name="nc_utils_feedback_invalid_feedback">Confirmar</string>
+    <string name="nc_utils_feedback_loading">Cancelar</string>
+    <string name="nc_utils_feedback_message">DE ACUERDO</string>
+    <string name="nc_utils_feedback_please_wait">Confirmar enviar?</string>
+    <string name="nc_utils_feedback_send">Cargando</string>
+    <string name="nc_utils_feedback_send_success">Por favor espera...</string>
+    <string name="nc_utils_insert_feedback">Por favor, dénos su opinión honesta.</string>
+    <string name="nc_utils_rate_dialog_cancel">Escriba sus comentarios</string>
+    <string name="nc_utils_rate_dialog_message">Gracias por tus comentarios.</string>
+    <string name="nc_utils_rate_dialog_message_2">retroalimentación inválida :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Tu email (opcional)</string>
+    <string name="nc_utils_rate_dialog_no">Vamos a llegar a usted por llenar su dirección de correo electrónico a continuación:</string>
+    <string name="nc_utils_rate_dialog_ok">Tu correo electrónico</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">Aplicación - Comentarios</string>
+    <string name="nc_utils_rate_dialog_title">Hola,</string>
+</resources>

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- rate related -->
-    <string name="nc_utils_rate_dialog_title">Mengadar Kami</string>
-    <string name="nc_utils_rate_dialog_message">Menikmati aplikasi ini?</string>
-    <string name="nc_utils_rate_dialog_message_2">Jika anda menikmati aplikasi ini, bolehkah anda mengadari aplikasi ini? Terima kasih atas sokongan anda!</string>
-    <string name="nc_utils_rate_dialog_message_3">Terima kasih. Cadangan anda akan dihargai.</string>
-    <string name="nc_utils_rate_dialog_ok">Mengadar Sekarang</string>
-    <string name="nc_utils_rate_dialog_cancel">Lain Kali</string>
-    <string name="nc_utils_rate_dialog_no">Tidak, terima kasih</string>
-    <string name="nc_utils_rate_dialog_please_select_a_rating">Tiada kadar dipilih.</string>
+    <string name="nc_utils_rate_dialog_title">Saudara,</string>
+    <string name="nc_utils_rate_dialog_message">Cadangan telah dihantarkan.</string>
+    <string name="nc_utils_rate_dialog_message_2">Cadangan tidak sah :(</string>
+    <string name="nc_utils_rate_dialog_message_3">E-mel Anda (Tidak Wajib)</string>
+    <string name="nc_utils_rate_dialog_ok">E-mel anda</string>
+    <string name="nc_utils_rate_dialog_cancel">Isikan cadangan</string>
+    <string name="nc_utils_rate_dialog_no">Biar kami menghubungi anda:</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Cadangan</string>
 
     <!-- feedback -->
-    <string name="nc_utils_feedback">Cadangan</string>
-    <string name="nc_utils_feedback_anonymously">Cadangan Tanpa Nama</string>
-    <string name="nc_utils_feedback_by_email">Cadangan Melalui E-mel</string>
-    <string name="nc_utils_feedback_confirm">Pasti</string>
-    <string name="nc_utils_feedback_cancel">Batal</string>
-    <string name="nc_utils_feedback_ok">OK</string>
-    <string name="nc_utils_feedback_send">Hantar</string>
-    <string name="nc_utils_feedback_confirm_send">Mengesah hantaran?</string>
-    <string name="nc_utils_feedback_loading">Loading</string>
-    <string name="nc_utils_feedback_please_wait">Sila tunggu...</string>
+    <string name="nc_utils_feedback">Mengadar Kami</string>
+    <string name="nc_utils_feedback_anonymously">Menikmati aplikasi ini?</string>
+    <string name="nc_utils_feedback_by_email">Jika anda menikmati aplikasi ini, bolehkah anda mengadari aplikasi ini? Terima kasih atas sokongan anda!</string>
+    <string name="nc_utils_feedback_confirm">Mengadar Sekarang</string>
+    <string name="nc_utils_feedback_cancel">Terima kasih. Cadangan anda akan dihargai.</string>
+    <string name="nc_utils_feedback_ok">Hantar</string>
+    <string name="nc_utils_feedback_send">Loading</string>
+    <string name="nc_utils_feedback_confirm_send">Lain Kali</string>
+    <string name="nc_utils_feedback_loading">Batal</string>
+    <string name="nc_utils_feedback_please_wait">Mengesah hantaran?</string>
 
     <!-- feedback anonymously-->
-    <string name="nc_utils_feedback_message">Sila memberikan maklum balas dan cadangan anda.</string>
-    <string name="nc_utils_insert_feedback">Isikan cadangan</string>
-    <string name="nc_utils_feedback_send_success">Cadangan telah dihantarkan.</string>
-    <string name="nc_utils_feedback_invalid_feedback">Cadangan tidak sah :(</string>
-    <string name="nc_utils_feedback_input_email_address_title">E-mel Anda (Tidak Wajib)</string>
-    <string name="nc_utils_feedback_input_email_address_message">Biar kami menghubungi anda:</string>
-    <string name="nc_utils_feedback_hint_email_address">E-mel anda</string>
+    <string name="nc_utils_feedback_message">OK</string>
+    <string name="nc_utils_insert_feedback">Sila memberikan maklum balas dan cadangan anda.</string>
+    <string name="nc_utils_feedback_send_success">Sila tunggu...</string>
+    <string name="nc_utils_feedback_invalid_feedback">Pasti</string>
+    <string name="nc_utils_feedback_input_email_address_title">Cadangan Melalui E-mel</string>
+    <string name="nc_utils_feedback_input_email_address_message">Cadangan Tanpa Nama</string>
+    <string name="nc_utils_feedback_hint_email_address">Cadangan</string>
 
     <!-- feedback email -->
-    <string name="nc_utils_feedback_email_subject">App - Cadangan</string>
-    <string name="nc_utils_feedback_email_message">Saudara,\n\n</string>
+    <string name="nc_utils_feedback_email_subject">Tiada kadar dipilih.</string>
+    <string name="nc_utils_feedback_email_message">Tidak, terima kasih</string>
 
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">послать</string>
+    <string name="nc_utils_feedback">Оцените нас</string>
+    <string name="nc_utils_feedback_anonymously">Наслаждение этого приложения?</string>
+    <string name="nc_utils_feedback_by_email">Если вам нравится с помощью этого приложения, вы не могли бы взять время, чтобы оценить его? Он выиграл \\ \'т взять больше, чем за минуту. Спасибо за Вашу поддержку!</string>
+    <string name="nc_utils_feedback_cancel">Спасибо за вашу оценку. Ваш отзыв поможет нам улучшить.</string>
+    <string name="nc_utils_feedback_confirm">Оценить сейчас</string>
+    <string name="nc_utils_feedback_confirm_send">Позже</string>
+    <string name="nc_utils_feedback_email_message">Нет, спасибо</string>
+    <string name="nc_utils_feedback_email_subject">Нет оценок не был выбран.</string>
+    <string name="nc_utils_feedback_hint_email_address">Обратная связь</string>
+    <string name="nc_utils_feedback_input_email_address_message">Обратная связь анонимно</string>
+    <string name="nc_utils_feedback_input_email_address_title">Обратная связь по электронной почте</string>
+    <string name="nc_utils_feedback_invalid_feedback">подтвердить</string>
+    <string name="nc_utils_feedback_loading">Отмена</string>
+    <string name="nc_utils_feedback_message">ОК</string>
+    <string name="nc_utils_feedback_please_wait">Подтверждение отправки?</string>
+    <string name="nc_utils_feedback_send">загрузка</string>
+    <string name="nc_utils_feedback_send_success">Пожалуйста, подождите...</string>
+    <string name="nc_utils_insert_feedback">Пожалуйста, дайте нам ваше честное мнение.</string>
+    <string name="nc_utils_rate_dialog_cancel">Введите свой отзыв</string>
+    <string name="nc_utils_rate_dialog_message">Спасибо за ваш отзыв.</string>
+    <string name="nc_utils_rate_dialog_message_2">Неверная обратная связь :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Ваш электронный адрес (необязательно)</string>
+    <string name="nc_utils_rate_dialog_no">Давайте тянуться к вам, заполнив свой адрес электронной почты ниже:</string>
+    <string name="nc_utils_rate_dialog_ok">Ваш адрес электронной почты</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Обратная связь</string>
+    <string name="nc_utils_rate_dialog_title">Здравствуйте,</string>
+</resources>

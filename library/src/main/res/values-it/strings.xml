@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">Inviare</string>
+    <string name="nc_utils_feedback">tasso degli Stati Uniti</string>
+    <string name="nc_utils_feedback_anonymously">Godendo di questa applicazione?</string>
+    <string name="nc_utils_feedback_by_email">Se vi piace utilizzando questa applicazione, ti dispiacerebbe prendere un momento di votarla? Ha vinto \\ \'t prende più di un minuto. Grazie per il vostro sostegno!</string>
+    <string name="nc_utils_feedback_cancel">Grazie per il tuo voto. Il vostro feedback può aiutarci a migliorare.</string>
+    <string name="nc_utils_feedback_confirm">Vota adesso</string>
+    <string name="nc_utils_feedback_confirm_send">Dopo</string>
+    <string name="nc_utils_feedback_email_message">No grazie</string>
+    <string name="nc_utils_feedback_email_subject">Nessuna valutazione è stata selezionata.</string>
+    <string name="nc_utils_feedback_hint_email_address">Risposta</string>
+    <string name="nc_utils_feedback_input_email_address_message">Commenti anonimo</string>
+    <string name="nc_utils_feedback_input_email_address_title">Feedback per email</string>
+    <string name="nc_utils_feedback_invalid_feedback">Conferma</string>
+    <string name="nc_utils_feedback_loading">Annulla</string>
+    <string name="nc_utils_feedback_message">ok</string>
+    <string name="nc_utils_feedback_please_wait">Confermare inviare?</string>
+    <string name="nc_utils_feedback_send">Caricamento in corso</string>
+    <string name="nc_utils_feedback_send_success">Attendere prego...</string>
+    <string name="nc_utils_insert_feedback">Vi preghiamo di darci il vostro feedback onesto.</string>
+    <string name="nc_utils_rate_dialog_cancel">Digitare il tuo feedback</string>
+    <string name="nc_utils_rate_dialog_message">Grazie per il tuo feedback.</string>
+    <string name="nc_utils_rate_dialog_message_2">il feedback non valido :(</string>
+    <string name="nc_utils_rate_dialog_message_3">La tua email (opzionale)</string>
+    <string name="nc_utils_rate_dialog_no">Cerchiamo di raggiungere fuori a voi per riempire il tuo indirizzo email qui sotto:</string>
+    <string name="nc_utils_rate_dialog_ok">Il tuo indirizzo di posta elettronica</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Risposte</string>
+    <string name="nc_utils_rate_dialog_title">Ciao,</string>
+</resources>

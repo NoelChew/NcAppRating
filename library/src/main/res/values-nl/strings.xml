@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">sturen</string>
+    <string name="nc_utils_feedback">Beoordeel ons</string>
+    <string name="nc_utils_feedback_anonymously">Genieten van deze app?</string>
+    <string name="nc_utils_feedback_by_email">Als u genieten van het gebruik van deze app, zou je het erg het nemen van een moment om het te beoordelen? Het won \\ \'t meer dan een minuut duren. Bedankt voor je ondersteuning!</string>
+    <string name="nc_utils_feedback_cancel">Dank u voor uw waardering. Uw feedback kan ons helpen verbeteren.</string>
+    <string name="nc_utils_feedback_confirm">Beoordeel nu</string>
+    <string name="nc_utils_feedback_confirm_send">Later</string>
+    <string name="nc_utils_feedback_email_message">Nee, dank u wel</string>
+    <string name="nc_utils_feedback_email_subject">Geen rating werd geselecteerd.</string>
+    <string name="nc_utils_feedback_hint_email_address">terugkoppeling</string>
+    <string name="nc_utils_feedback_input_email_address_message">Terugkoppeling anoniem</string>
+    <string name="nc_utils_feedback_input_email_address_title">Feedback via e-mail</string>
+    <string name="nc_utils_feedback_invalid_feedback">Bevestigen</string>
+    <string name="nc_utils_feedback_loading">Annuleer</string>
+    <string name="nc_utils_feedback_message">OK</string>
+    <string name="nc_utils_feedback_please_wait">Bevestigen sturen?</string>
+    <string name="nc_utils_feedback_send">het laden</string>
+    <string name="nc_utils_feedback_send_success">Even geduld aub...</string>
+    <string name="nc_utils_insert_feedback">Geef ons uw eerlijke feedback.</string>
+    <string name="nc_utils_rate_dialog_cancel">Typ in uw feedback</string>
+    <string name="nc_utils_rate_dialog_message">Hartelijk dank voor uw feedback.</string>
+    <string name="nc_utils_rate_dialog_message_2">Ongeldige feedback :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Uw e-mailadres (Optioneel)</string>
+    <string name="nc_utils_rate_dialog_no">Laat ons uit te reiken naar je door het invullen van uw e-mailadres hieronder:</string>
+    <string name="nc_utils_rate_dialog_ok">jouw e-mailadres</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Feedback</string>
+    <string name="nc_utils_rate_dialog_title">Hallo,</string>
+</resources>

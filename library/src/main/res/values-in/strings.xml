@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">Kirim</string>
+    <string name="nc_utils_feedback">tingkat Kami</string>
+    <string name="nc_utils_feedback_anonymously">Menikmati aplikasi ini?</string>
+    <string name="nc_utils_feedback_by_email">Jika Anda menikmati menggunakan aplikasi ini, akan Anda keberatan mengambil waktu untuk menilai itu? Ini memenangkan t \\ \'mengambil lebih dari satu menit. Terima kasih atas dukungan Anda!</string>
+    <string name="nc_utils_feedback_cancel">Terima kasih atas penilaian Anda. Tanggapan Anda dapat membantu kami meningkatkan.</string>
+    <string name="nc_utils_feedback_confirm">tingkat sekarang</string>
+    <string name="nc_utils_feedback_confirm_send">Kemudian</string>
+    <string name="nc_utils_feedback_email_message">Tidak, terima kasih</string>
+    <string name="nc_utils_feedback_email_subject">Tidak ada rating terpilih.</string>
+    <string name="nc_utils_feedback_hint_email_address">Masukan</string>
+    <string name="nc_utils_feedback_input_email_address_message">umpan balik anonim</string>
+    <string name="nc_utils_feedback_input_email_address_title">Umpan balik melalui Email</string>
+    <string name="nc_utils_feedback_invalid_feedback">Memastikan</string>
+    <string name="nc_utils_feedback_loading">Membatalkan</string>
+    <string name="nc_utils_feedback_message">baik</string>
+    <string name="nc_utils_feedback_please_wait">Konfirmasi kirim?</string>
+    <string name="nc_utils_feedback_send">Pemuatan</string>
+    <string name="nc_utils_feedback_send_success">Mohon tunggu...</string>
+    <string name="nc_utils_insert_feedback">Tolong beri kami umpan balik yang jujur ​​Anda.</string>
+    <string name="nc_utils_rate_dialog_cancel">Ketik tanggapan Anda</string>
+    <string name="nc_utils_rate_dialog_message">Terima kasih atas tanggapan Anda.</string>
+    <string name="nc_utils_rate_dialog_message_2">umpan balik tidak valid :(</string>
+    <string name="nc_utils_rate_dialog_message_3">Email Anda (Opsional)</string>
+    <string name="nc_utils_rate_dialog_no">Mari kita menjangkau Anda dengan mengisi alamat email Anda di bawah ini:</string>
+    <string name="nc_utils_rate_dialog_ok">Alamat email anda</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Feedback</string>
+    <string name="nc_utils_rate_dialog_title">Halo,</string>
+</resources>

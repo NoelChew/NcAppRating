@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nc_utils_feedback_ok">送信</string>
+    <string name="nc_utils_feedback">私たちを評価してください</string>
+    <string name="nc_utils_feedback_anonymously">このアプリを楽しみますか？</string>
+    <string name="nc_utils_feedback_by_email">あなたは、このアプリを使用して楽しむ場合、あなたはそれを評価する瞬間を取って気にしますか？これは、tが1分以上かかる\\ \'勝ちました。ご協力ありがとうございます！</string>
+    <string name="nc_utils_feedback_cancel">あなたの評価をいただき、ありがとうございます。ご意見は向上させることができます。</string>
+    <string name="nc_utils_feedback_confirm">今レート</string>
+    <string name="nc_utils_feedback_confirm_send">後で</string>
+    <string name="nc_utils_feedback_email_message">結構です</string>
+    <string name="nc_utils_feedback_email_subject">何の評価が選択されていません。</string>
+    <string name="nc_utils_feedback_hint_email_address">フィードバック</string>
+    <string name="nc_utils_feedback_input_email_address_message">匿名のフィードバック</string>
+    <string name="nc_utils_feedback_input_email_address_title">メールによるフィードバック</string>
+    <string name="nc_utils_feedback_invalid_feedback">確認します</string>
+    <string name="nc_utils_feedback_loading">キャンセル</string>
+    <string name="nc_utils_feedback_message">はい</string>
+    <string name="nc_utils_feedback_please_wait">送信の確認？</string>
+    <string name="nc_utils_feedback_send">ローディング</string>
+    <string name="nc_utils_feedback_send_success">お待ちください...</string>
+    <string name="nc_utils_insert_feedback">私達にあなたの正直なフィードバックをお願いします。</string>
+    <string name="nc_utils_rate_dialog_cancel">あなたのフィードバックを入力</string>
+    <string name="nc_utils_rate_dialog_message">ご意見ありがとうございます。</string>
+    <string name="nc_utils_rate_dialog_message_2">無効なフィードバック:(</string>
+    <string name="nc_utils_rate_dialog_message_3">あなたのメールアドレス（オプション）</string>
+    <string name="nc_utils_rate_dialog_no">私たちは、下記のメールアドレスを充填することによって、あなたに手を差し伸べるしてみましょう：</string>
+    <string name="nc_utils_rate_dialog_ok">メールアドレス</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">App - フィードバック</string>
+    <string name="nc_utils_rate_dialog_title">こんにちは、</string>
+</resources>
