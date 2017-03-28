@@ -1,37 +1,37 @@
 <resources>
     <!-- rate related -->
-    <string name="nc_utils_rate_dialog_title">你好,</string>
-    <string name="nc_utils_rate_dialog_message">感谢您的反馈意见</string>
-    <string name="nc_utils_rate_dialog_message_2">无效的反馈:(</string>
-    <string name="nc_utils_rate_dialog_message_3">您的电子邮件（可选留空）</string>
-    <string name="nc_utils_rate_dialog_ok">您的电子邮件</string>
-    <string name="nc_utils_rate_dialog_cancel">在此输入您的意见</string>
-    <string name="nc_utils_rate_dialog_no">让我们与您联系：</string>
-    <string name="nc_utils_rate_dialog_please_select_a_rating">App - Feedback</string>
+    <string name="nc_utils_rate_dialog_title">给评价</string>
+    <string name="nc_utils_rate_dialog_message">享受此应用程序?</string>
+    <string name="nc_utils_rate_dialog_message_2">如果您喜欢这款应用，请您花费一点点时间给我们些评价，谢谢您的支持！</string>
+    <string name="nc_utils_rate_dialog_message_3">谢谢您的评价。您的反馈能帮助我们进步。</string>
+    <string name="nc_utils_rate_dialog_ok">立即评价</string>
+    <string name="nc_utils_rate_dialog_cancel">稍后再来</string>
+    <string name="nc_utils_rate_dialog_no">残忍拒绝</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">没有评价</string>
 
     <!-- feedback -->
-    <string name="nc_utils_feedback">给评价</string>
-    <string name="nc_utils_feedback_anonymously">享受此应用程序?</string>
-    <string name="nc_utils_feedback_by_email">如果您喜欢这款应用，请您花费一点点时间给我们些评价，谢谢您的支持！</string>
-    <string name="nc_utils_feedback_confirm">立即评价</string>
-    <string name="nc_utils_feedback_cancel">谢谢您的评价。您的反馈能帮助我们进步。</string>
-    <string name="nc_utils_feedback_ok">发送</string>
-    <string name="nc_utils_feedback_send">发送中</string>
-    <string name="nc_utils_feedback_confirm_send">稍后再来</string>
-    <string name="nc_utils_feedback_loading">取消</string>
-    <string name="nc_utils_feedback_please_wait">确定发送?</string>
+    <string name="nc_utils_feedback">反馈意见</string>
+    <string name="nc_utils_feedback_anonymously">匿名反馈意见</string>
+    <string name="nc_utils_feedback_by_email">邮件反馈意见</string>
+    <string name="nc_utils_feedback_confirm">确定</string>
+    <string name="nc_utils_feedback_cancel">取消</string>
+    <string name="nc_utils_feedback_ok">OK</string>
+    <string name="nc_utils_feedback_send">发送</string>
+    <string name="nc_utils_feedback_confirm_send">确定发送?</string>
+    <string name="nc_utils_feedback_loading">发送中</string>
+    <string name="nc_utils_feedback_please_wait">请稍等...</string>
 
     <!-- feedback anonymously-->
-    <string name="nc_utils_feedback_message">OK</string>
-    <string name="nc_utils_insert_feedback">如果您有任何意见，请与我们分享。</string>
-    <string name="nc_utils_feedback_send_success">请稍等...</string>
-    <string name="nc_utils_feedback_invalid_feedback">确定</string>
-    <string name="nc_utils_feedback_input_email_address_title">邮件反馈意见</string>
-    <string name="nc_utils_feedback_input_email_address_message">匿名反馈意见</string>
-    <string name="nc_utils_feedback_hint_email_address">反馈意见</string>
+    <string name="nc_utils_feedback_message">如果您有任何意见，请与我们分享。</string>
+    <string name="nc_utils_insert_feedback">在此输入您的意见</string>
+    <string name="nc_utils_feedback_send_success">感谢您的反馈意见</string>
+    <string name="nc_utils_feedback_invalid_feedback">无效的反馈:(</string>
+    <string name="nc_utils_feedback_input_email_address_title">您的电子邮件（可选留空）</string>
+    <string name="nc_utils_feedback_input_email_address_message">让我们与您联系：</string>
+    <string name="nc_utils_feedback_hint_email_address">您的电子邮件</string>
 
     <!-- feedback email -->
-    <string name="nc_utils_feedback_email_subject">没有评价</string>
-    <string name="nc_utils_feedback_email_message">残忍拒绝</string>
+    <string name="nc_utils_feedback_email_subject">App - Feedback</string>
+    <string name="nc_utils_feedback_email_message">你好,</string>
 
 </resources>
