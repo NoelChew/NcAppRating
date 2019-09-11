@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="nc_utils_feedback_ok">ОК</string>
-    <string name="nc_utils_feedback">Обратная связь</string>
-    <string name="nc_utils_feedback_anonymously">Обратная связь анонимно</string>
-    <string name="nc_utils_feedback_by_email">Обратная связь по электронной почте</string>
-    <string name="nc_utils_feedback_cancel">Отмена</string>
-    <string name="nc_utils_feedback_confirm">подтвердить</string>
-    <string name="nc_utils_feedback_confirm_send">Подтверждение отправки?</string>
     <string name="nc_utils_feedback_email_message">Здравствуйте,</string>
     <string name="nc_utils_feedback_email_subject">App - Обратная связь</string>
+
+    <string name="nc_utils_feedback">Обратная связь</string>
+    <string name="nc_utils_feedback_anonymously">Анонимная обратная связь</string>
+    <string name="nc_utils_feedback_by_email">Обратная связь по электронной почте</string>
+    <string name="nc_utils_feedback_cancel">Отмена</string>
+    <string name="nc_utils_feedback_confirm">Подтвердить</string>
+    <string name="nc_utils_feedback_confirm_send">Подтверждаете отправку?</string>
     <string name="nc_utils_feedback_hint_email_address">Ваш адрес электронной почты</string>
-    <string name="nc_utils_feedback_input_email_address_message">Давайте тянуться к вам, заполнив свой адрес электронной почты ниже:</string>
-    <string name="nc_utils_feedback_input_email_address_title">Ваш электронный адрес (необязательно)</string>
-    <string name="nc_utils_feedback_invalid_feedback">Неверная обратная связь :(</string>
-    <string name="nc_utils_feedback_loading">загрузка</string>
-    <string name="nc_utils_feedback_message">Пожалуйста, дайте нам ваше честное мнение.</string>
+    <string name="nc_utils_feedback_input_email_address_message">Заполните адрес электронной почты, чтобы мы могли связаться с вами:</string>
+    <string name="nc_utils_feedback_input_email_address_title">Адрес электронной почты</string>
+    <string name="nc_utils_feedback_invalid_feedback">Ошибка при обратной связи :(</string>
+    <string name="nc_utils_feedback_loading">Загрузка</string>
+    <string name="nc_utils_feedback_message">Пожалуйста, напишите нам ваш честный отзыв:</string>
+    <string name="nc_utils_feedback_ok">ОК</string>
     <string name="nc_utils_feedback_please_wait">Пожалуйста, подождите...</string>
-    <string name="nc_utils_feedback_send">послать</string>
-    <string name="nc_utils_feedback_send_success">Спасибо за ваш отзыв.</string>
-    <string name="nc_utils_insert_feedback">Введите свой отзыв</string>
+    <string name="nc_utils_feedback_send">Отправить</string>
+    <string name="nc_utils_feedback_send_success">Спасибо за отзыв.</string>
+    <string name="nc_utils_insert_feedback">Напишите свой отзыв</string>
+
     <string name="nc_utils_rate_dialog_cancel">Позже</string>
-    <string name="nc_utils_rate_dialog_message">Наслаждение этого приложения?</string>
-    <string name="nc_utils_rate_dialog_message_2">Если вам нравится с помощью этого приложения, вы не могли бы взять время, чтобы оценить его? Он выиграл \\ \'т взять больше, чем за минуту. Спасибо за Вашу поддержку!</string>
-    <string name="nc_utils_rate_dialog_message_3">Спасибо за вашу оценку. Ваш отзыв поможет нам улучшить.</string>
+    <string name="nc_utils_rate_dialog_message">Нравится это приложение?</string>
+    <string name="nc_utils_rate_dialog_message_2">"Если вам понравилось это приложение, вы не могли бы воспользоваться моментом, чтобы оценить его? Это не займёт больше минуты. Спасибо за поддержку!"</string>
+    <string name="nc_utils_rate_dialog_message_3">Спасибо за оценку. Ваш отзыв поможет нам стать лучше.</string>
     <string name="nc_utils_rate_dialog_no">Нет, спасибо</string>
-    <string name="nc_utils_rate_dialog_ok">Оценить сейчас</string>
-    <string name="nc_utils_rate_dialog_please_select_a_rating">Нет оценок не был выбран.</string>
-    <string name="nc_utils_rate_dialog_title">Оцените нас</string>
+    <string name="nc_utils_rate_dialog_ok">Оценить</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">Оценка не выбрана.</string>
+    <string name="nc_utils_rate_dialog_title">Оценка</string>
 </resources>

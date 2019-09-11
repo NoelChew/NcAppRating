@@ -1,6 +1,6 @@
 package com.noelchew.ncapprating.library;
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 /**
  * Created by noelchew on 7/27/16.
