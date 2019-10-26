@@ -2,7 +2,7 @@
 <resources>
     <string name="nc_utils_feedback_ok">DE ACUERDO</string>
     <string name="nc_utils_feedback">Enviar comentarios</string>
-    <string name="nc_utils_feedback_anonymously">Comentar anonimamente</string>
+    <string name="nc_utils_feedback_anonymously">Comentar anónimamente</string>
     <string name="nc_utils_feedback_by_email">Comentar por correo electrónico</string>
     <string name="nc_utils_feedback_cancel">Cancelar</string>
     <string name="nc_utils_feedback_confirm">Confirmar</string>
