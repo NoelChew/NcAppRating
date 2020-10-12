@@ -1,0 +1,36 @@
+<resources>
+    <!-- rate related -->
+    <string name="nc_utils_rate_dialog_title">हमें रेट करें</string>
+    <string name="nc_utils_rate_dialog_message">इस ऐप का आनंद ले रहे हैं?</string>
+    <string name="nc_utils_rate_dialog_message_2">यदि आप इस ऐप का उपयोग करके आनंद लेते हैं, तो क्या आप इसे रेट करने में एक पल का समय लेंगे? इसमें एक मिनट से अधिक समय नहीं लगेगा। आपके समर्थन के लिए धन्यवाद!</string>
+    <string name="nc_utils_rate_dialog_message_3">आपकी रेटिंग के लिए धन्यवाद। आपकी प्रतिक्रिया हमें बेहतर बनाने में मदद कर सकती है।</string>
+    <string name="nc_utils_rate_dialog_ok">अभी रेट करें</string>
+    <string name="nc_utils_rate_dialog_cancel">बाद में</string>
+    <string name="nc_utils_rate_dialog_no">नहीं\u002C धन्यवाद</string>
+    <string name="nc_utils_rate_dialog_please_select_a_rating">कोई रेटिंग नहीं चुनी गई थी।</string>
+
+    <!-- feedback -->
+    <string name="nc_utils_feedback">फ़ीडबैक</string>
+    <string name="nc_utils_feedback_anonymously">फ़ीडबैक अनाम रूप से</string>
+    <string name="nc_utils_feedback_by_email">ईमेल द्वारा प्रतिक्रिया</string>
+    <string name="nc_utils_feedback_confirm">पुष्टि करें</string>
+    <string name="nc_utils_feedback_cancel">रद्द करें</string>
+    <string name="nc_utils_feedback_ok">OK</string>
+    <string name="nc_utils_feedback_send">भेजें</string>
+    <string name="nc_utils_feedback_confirm_send">भेजने की पुष्टि करें ?</string>
+    <string name="nc_utils_feedback_loading">लोड हो रहा है</string>
+    <string name="nc_utils_feedback_please_wait">कृपया प्रतीक्षा करें</string>
+
+    <!-- feedback anonymously-->
+    <string name="nc_utils_feedback_message">कृपया हमें अपनी ईमानदार प्रतिक्रिया दें।</string>
+    <string name="nc_utils_insert_feedback">अपनी प्रतिक्रिया में टाइप करें</string>
+    <string name="nc_utils_feedback_send_success">आपकी प्रतिक्रिया के लिए धन्यवाद।</string>
+    <string name="nc_utils_feedback_invalid_feedback">अमान्य फ़ीडबैक :(</string>
+    <string name="nc_utils_feedback_input_email_address_title">आपका ईमेल</string>
+    <string name="nc_utils_feedback_input_email_address_message">अपना ईमेल पता भरें ताकि हम आपसे संपर्क कर सकें:</string>
+    <string name="nc_utils_feedback_hint_email_address">आपका ईमेल पता</string>
+
+    <!-- feedback email -->
+    <string name="nc_utils_feedback_email_subject">ऐप - प्रतिक्रिया</string>
+    <string name="nc_utils_feedback_email_message">हैलो\u002C</string>
+</resources>

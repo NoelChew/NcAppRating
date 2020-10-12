@@ -1,5 +1,6 @@
 package com.noelchew.ncapprating.library;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -18,6 +19,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
 import java.lang.ref.WeakReference;
@@ -162,6 +164,9 @@ public class NcAppRating {
      * @param themeId
      */
     public void showRateDialog(final Context context, int themeId) {
+        if (!checkContext(context)) {
+            return;
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(context, themeId);
         showRateDialog(context, builder);
     }
@@ -344,36 +349,21 @@ public class NcAppRating {
         }
     }
 
-    public static void goToMarket(Context context, String webUrl, String marketUri) {
-        Uri uri = Uri.parse(marketUri);
-        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-        // To count with Play market backstack, After pressing back button,
-        // to taken back to our application, we need to add following flags to intent.
-        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
-                Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET |
-                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        try {
-            context.startActivity(goToMarket);
-        } catch (ActivityNotFoundException e) {
-            context.startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse(webUrl)));
+
+    private boolean checkContext(Context context) {
+        if (context == null) {
+            return false;
+        } else if (context instanceof Activity && isActivityFinishingOrDestroyed((Activity) context)) {
+            return false;
         }
+        return true;
     }
 
-    // call this method if you want users to rate your app
-    public static void rateUs(Context context) {
-        Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
-        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-        // To count with Play market backstack, After pressing back button,
-        // to taken back to our application, we need to add following flags to intent.
-        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
-                Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET |
-                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-        try {
-            context.startActivity(goToMarket);
-        } catch (ActivityNotFoundException e) {
-            context.startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://play.google.com/store/apps/details?id=" + context.getPackageName())));
+    private boolean isActivityFinishingOrDestroyed(Activity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            return activity.isDestroyed() || activity.isFinishing();
+        } else {
+            return activity.isFinishing();
         }
     }
 }
