@@ -349,6 +349,10 @@ public class NcAppRating {
         }
     }
 
+    // call this method if you want users to rate your app
+    public static void rateUs(Context context) {
+        PlayStoreUtil.rateUs(context);
+    }
 
     private boolean checkContext(Context context) {
         if (context == null) {
