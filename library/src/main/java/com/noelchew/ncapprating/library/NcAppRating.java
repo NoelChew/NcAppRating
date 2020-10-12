@@ -192,12 +192,11 @@ public class NcAppRating {
         int rateButtonID = sConfig.getYesButtonTextResourceId() != 0 ? sConfig.getYesButtonTextResourceId() : R.string.nc_utils_rate_dialog_ok;
         LayoutInflater inflater = LayoutInflater.from(context);
         dialogView = inflater.inflate(R.layout.stars, null);
-//        TextView contentTextView = (TextView)dialogView.findViewById(R.id.text_content);
-//        contentTextView.setText(messageId);
+        TextView contentTextView = (TextView)dialogView.findViewById(R.id.text_content);
+        contentTextView.setText(messageId);
         RatingBar ratingBar = (RatingBar) dialogView.findViewById(R.id.ratingBar);
         builder.setView(dialogView);
         builder.setTitle(titleId);
-        builder.setMessage(messageId);
         builder.setPositiveButton(rateButtonID, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
